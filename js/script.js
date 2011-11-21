@@ -31,13 +31,6 @@ $(document).ready(function(){
 			$(v).removeClass('selected');
 		});
 	});
-
-	// Select sum
-	$('div .scale answer').hover(function(){
-		$(this).prevAll().attr("class", "highlight");
-		$(this).nextAll().attr("class", "");
-		$(this).attr("class", "active");
-	});
 	
 	// Update the model each time a question is updated
 	$('#page2 questions question').click(function(){

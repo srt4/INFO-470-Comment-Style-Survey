@@ -13,9 +13,6 @@ body div
 	width: 960px;
 	background: rgba(255,255,255,0.9);
 	margin: auto;
-	/*margin-top: 2em;
-	margin-bottom: 2em;
-	height: 500px;*/
 	font-family: 'Open Sans', arial;
 	padding: 15px;
 }
@@ -23,18 +20,6 @@ body div
 body div.active
 {
 	display: block;
-}
-
-#page1 
-{
-	width: 960px;
-	background: rgba(255,255,255,0.9);
-	margin: auto;
-	/*margin-top: 2em;
-	margin-bottom: 2em;
-	height: 500px;*/
-	font-family: 'Open Sans', arial;
-	padding: 15px;
 }
 
 h1
@@ -54,6 +39,7 @@ questions
 {
 	display: block;
 	/*margin: 20px;*/
+	margin-bottom: 100px;
 }
 
 question
@@ -115,4 +101,28 @@ input
 {
 	background: rgb(20,20,20);
 	color: white;
+}
+
+.scale answers
+{
+	padding-top: 20px;
+}
+
+.scale answer
+{
+	width: 50px !important; 
+	display: inline-block !important;
+}
+
+#page-inc
+{
+	position: fixed; 
+	bottom:0px; 
+	width: 100%;
+	left: 0px;
+	font-size: 1.5em;
+	height: 1.5em;
+	background: white;
+	text-align: center;
+	box-shadow: 0px 0px 5px black;
 }
