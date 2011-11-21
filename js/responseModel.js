@@ -61,8 +61,3 @@ function pushAnswers ()
 		}	
 	);
 }
-
-function paginate ()
-{
-	
-}

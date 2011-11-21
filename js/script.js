@@ -37,4 +37,9 @@ $(document).ready(function(){
 		console.log("Updating model?");
 		updateModel(this);
 	});
+	
+	
+	$('#page-inc a').click(function(){
+		$('questions:visible').fadeOut();
+	});
 });
