@@ -5,14 +5,17 @@ body
 
 body div
 {
+	position: relative;
+	top: 0px;
+	bottom: 0px;
+	box-shadow: 0px 0px 10px black;
 	display: none;
 	width: 960px;
-	border: dashed medium black;
 	background: rgba(255,255,255,0.9);
 	margin: auto;
-	margin-top: 2em;
+	/*margin-top: 2em;
 	margin-bottom: 2em;
-	//height: 500px;
+	height: 500px;*/
 	font-family: 'Open Sans', arial;
 	padding: 15px;
 }
@@ -25,12 +28,11 @@ body div.active
 #page1 
 {
 	width: 960px;
-	border: dashed medium black;
 	background: rgba(255,255,255,0.9);
 	margin: auto;
-	margin-top: 2em;
+	/*margin-top: 2em;
 	margin-bottom: 2em;
-	//height: 500px;
+	height: 500px;*/
 	font-family: 'Open Sans', arial;
 	padding: 15px;
 }
@@ -78,7 +80,7 @@ input
 	color: #666;
 }
 
-#page2 question selectOne, #page2 question selectMany
+#page2 question answer
 {
 	margin-bottom: 10px;
 	padding: 5px;
@@ -92,7 +94,12 @@ input
 	color: white;
 }
 
-#page2 question selectSum
+#page2 question .one answer:hover
+{
+	background: rgba(200,200,200,0.7);
+}
+
+#page2 question .one
 {
 	padding: 15px;
 	background: rgb(200,200,200);

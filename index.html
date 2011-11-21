@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 	<body>
-		<div id="page1" class="active">
+		<div id="page1" class="active" style="margin-top: -10px; margin-bottom: -10px">
 			<h1>Team 21 Research Survey</h1>
 			<introText>
 				Thank you for taking our survey blah blah blah.
@@ -15,79 +15,108 @@
 				<a href='#' data-action="nextPage">Click here</a> to continue. 
 			</introText>
 		</div>
-		<div id="page2">
+		<div id="page2" style="margin-top: -10px; margin-bottom: -10px">
 			<h1>Page 1</h1>
 			<introText>
 				Thank you for taking our survey. 
 			</introText>
 			
 			<questions>
-				<question id="gender">
+				<question id="read" class="one">
+					<query>Do you read comment sections of websites?</query>
+					<answers>
+						<answer>Yes</answer>
+						<answer>No</answer>
+						<answer>Don't know or don't want to answer</answer>
+					</answers>
+				</question>
+				
+				<question id="comment" class="one">
+					<query>Have you ever posted a comment on a website?</query>
+					<answers>
+						<answer>Yes</answer>
+						<answer>No</answer>
+						<answer>Don't know or don't want to answer</answer>
+					</answers>
+				</question>
+				
+				<question id="comment-reply" class="one conditional" data-depends="comment" data-depends-value="0">
+					<query>Do you ever reply to other people's comments?</query>
+					<answers>
+						<answer>Yes</answer>
+						<answer>No</answer>
+						<answer>Don't know or don't want to answer</answer>
+					</answers>
+				</question>
+				
+				<question id="gender" class="one">
 					<query>
 						What is your gender?
 					</query>
 					<answers>
-						<selectOne>Male</selectOne>
-						<selectOne>Female</selectOne>
-						<selectOne>Don't know / refused</selectOne>
+						<answer>Male</answer>
+						<answer>Female</answer>
+						<answer>Don't know or don't want to answer</answer>
 					</answers>	
 				</question>
 				
-				<question id="often">
+				<question id="often" class="one">
 					<query>
 						How often do you use the internet?
 					</query>
 					<answers>
-						<selectOne>More than once a day</selectOne>
-						<selectOne>More than once a week</selectOne>
-						<selectOne>More than once a month</selectOne>
-						<selectOne>Don't know / refused</selectOne>
+						<answer>More than once a day</answer>
+						<answer>More than once a week</answer>
+						<answer>More than once a month</answer>
+						<answer>Don't know or don't want to answer</answer>
 					</answers>
 				</question>
 				
-				<question id="websites">
+				<question id="websites" class="many">
 					<query>
 						Which websites do you read? (Select all that apply.)
 					</query>
 					<answers>
-						<selectMany>
+						<answer>
 							Facebook
-						</selectMany>
-						<selectMany>
+						</answer>
+						<answer>
 							Reddit
-						</selectMany>
-						<selectMany>
+						</answer>
+						<answer>
 							Newspaper Websites (NYT, Seattle Times, etc.)
-						</selectMany>
-						<selectMany>
+						</answer>
+						<answer>
 							Tech-related websites (Engadget, Gizmodo, etc.)
-						</selectMany>
-						<selectMany>
-							Don't know / refused
-						</selectMany>
+						</answer>
+						<answer>
+							Don't know or don't want to answer
+						</answer>
 					</answers>
 				</question>
 				
-				<question id="test">
+				<question id="test" class="scale">
 					<query>
 						On a scale of 0 to 5, how well does the following statement reflect your opinion? 
 						<br />
 						(0=Strongly disagree, 5=Strongly agree)
 					</query>
 					<answers>
-						<selectSum>0</selectSum>
-						<selectSum>1</selectSum>
-						<selectSum>2</selectSum>
-						<selectSum>3</selectSum>
-						<selectSum>4</selectSum>
-						<selectSum>5</selectSum>
+						<answer>0</answer>
+						<answer>1</answer>
+						<answer>2</answer>
+						<answer>3</answer>
+						<answer>4</answer>
+						<answer>5</answer>
 					</answers>
 				</question>
 			</questions>		
 		</div>
+
 		<div id="page3">
 		</div>
 	</body>
 	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/responseModel.js"></script>
 </html>
