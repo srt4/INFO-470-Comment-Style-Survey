@@ -22,7 +22,7 @@
 			</introText>
 			
 			<questions>
-				<questionPage id="qp1">
+				<questionpage id="qp1" class="current">
 					<question id="read" class="one">
 						<query>Do you read comment sections of websites?</query>
 						<answers>
@@ -112,12 +112,26 @@
 							<answer>5</answer>
 						</answers>
 					</question>
-				</questionPage>
-				<questionPage id="qp2">
-				</questionPage>
+				</questionpage>
+				<questionpage id="qp2" style="display:none">
+					<question id="often" class="one scale">
+						<query>
+							On a scale of 0 to 5, how well does the following statement reflect your opinion? 
+							<br />
+							<em>(1=Strongly disagree, 5=Strongly agree)</em>
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+				</questionpage>
 				<paginator id="page-inc">
 					<a id='prev' href='#'>< Prev</a> 
-					<span id="counter">| Page {p} of {pp} |</span>
+					<span id="counter">| Page <span id="curr-page"></span> of <span id="total-pages"></span> |</span>
 					<a id='next' href='#'>Next ></a>
 				</paginator>
 			</questions>						
