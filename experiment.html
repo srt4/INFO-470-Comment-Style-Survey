@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>470 Survey Questions</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 	<body>
@@ -96,6 +97,103 @@
 					</question>
 				</questions>
 			</questionpage>
+			<questionpage id="qp1" style="display:none">
+				<question id="read" class="one">
+					<query>Do you read comment sections of websites?</query>
+					<answers>
+						<answer>Yes</answer>
+						<answer>No</answer>
+						<answer>Don't know or don't want to answer</answer>
+					</answers>
+				</question>
+				
+				<question id="comment" class="one">
+					<query>Have you ever posted a comment on a website?</query>
+					<answers>
+						<answer>Yes</answer>
+						<answer>No</answer>
+						<answer>Don't know or don't want to answer</answer>
+					</answers>
+				</question>
+				
+				<question id="comment-reply" class="one conditional" data-depends="comment" data-depends-value="0">
+					<query>Do you ever reply to other people's comments?</query>
+					<answers>
+						<answer>Yes</answer>
+						<answer>No</answer>
+						<answer>Don't know or don't want to answer</answer>
+					</answers>
+				</question>
+			</questionpage>
+			
+			<questionpage id="qp2" style="display:none">
+				<question id="websites" class="many">
+					<query>
+						Which websites do you read?
+						<br/>
+						<em>(Select all that apply)</em>
+					</query>
+					<answers>
+						<answer>
+							Facebook
+						</answer>
+						<answer>
+							Reddit
+						</answer>
+						<answer>
+							Newspaper Websites (NYT, Seattle Times, etc.)
+						</answer>
+						<answer>
+							Tech-related websites (Engadget, Gizmodo, etc.)
+						</answer>
+						<answer>
+							Don't know or don't want to answer
+						</answer>
+					</answers>
+				</question>
+				
+				<question id="often" class="one scale">
+					<query>
+						On a scale of 0 to 5, how well does the following statement reflect your opinion? 
+						<br />
+						<em>(1=Strongly disagree, 5=Strongly agree)</em>
+					</query>
+					<answers>
+						<answer>1</answer>
+						<answer>2</answer>
+						<answer>3</answer>
+						<answer>4</answer>
+						<answer>5</answer>
+					</answers>
+				</question>
+			</questionpage>
+			
+			<questionpage id="qp3" style="display:none">
+				<questions>
+					<question id="gender" class="one">
+						<query>
+							What is your gender?
+						</query>
+						<answers>
+							<answer>Male</answer>
+							<answer>Female</answer>
+							<answer>Don't know or don't want to answer</answer>
+						</answers>	
+					</question>	
+					
+					<question id="often" class="one">
+						<query>
+							How often do you use the internet?
+						</query>
+						<answers>
+							<answer>More than once a day</answer>
+							<answer>More than once a week</answer>
+							<answer>More than once a month</answer>
+							<answer>Don't know or don't want to answer</answer>
+						</answers>
+					</question>			
+			</questionpage>
+			
 			<questionpage style="display:none">
 				<introtext>
 					<h2>Thank you for taking our survey.</h2>

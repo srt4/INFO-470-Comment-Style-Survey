@@ -140,6 +140,6 @@ $(document).ready(function(){
 		Survey.completed = 'true';
 		pushAnswers();
 		$('paginator').fadeOut();
-		$('questionpage.current introtext').text("Thank you!");
+		$('questionpage.current introtext').html("Your responses have been saved. <br />Thank you for your time!");
 	});
 });
