@@ -37,7 +37,7 @@ function updateModel (elem)
 	// Cases: selectOne, selectMany, freeResponse
 	if ($(elem).hasClass('one'))
 	{
-		Survey.responses[$(elem).attr('id')] = $(elem).find('.selected').index();
+		Survey.responses[$(elem).attr('id')] = {'time': Date.now(), 'value': $(elem).find('.selected').index()};
 	}
 	
 	// 
@@ -45,6 +45,7 @@ function updateModel (elem)
 	{
 		$.each($(elem).find('answer'), function(key, value) {
 			Survey.responses[$(elem).attr('id')][$(value).index()] = $(value).hasClass('selected') ? 1 : 0;
+			Survey.responses[$(elem).attr('id')].time = Date.now();
 		});
 	}
 	
