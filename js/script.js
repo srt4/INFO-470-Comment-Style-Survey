@@ -48,8 +48,8 @@ $(document).ready(function(){
 		{
 			if(canPrev())
 			{
-				$('questionpage.current').removeClass('current').fadeOut(function(){
-					$(this).prev('questionpage').fadeIn(updatePageNumbers).addClass('current');
+				$('questionpage.current').removeClass('current').fadeOut(200, function(){
+					$(this).prev('questionpage').fadeIn(100, updatePageNumbers).addClass('current');
 				});			
 			}
 		}
@@ -57,8 +57,8 @@ $(document).ready(function(){
 		{
 			if(canNext())
 			{
-				$('questionpage.current').removeClass('current').fadeOut(function(){
-					$(this).next('questionpage').fadeIn(updatePageNumbers).addClass('current');
+				$('questionpage.current').removeClass('current').fadeOut(200, function(){
+					$(this).next('questionpage').fadeIn(100, updatePageNumbers).addClass('current');
 				});
 			}
 		}

@@ -16,9 +16,9 @@
 			</introText>
 		</div>
 		<div id="page2" style="margin-top: -10px; margin-bottom: -10px">
-			<h1>Page 1</h1>
+			<h1>Team 21 Research Survey</h1>
 			<introText>
-				Thank you for taking our survey. 
+				
 			</introText>
 			
 			<questions>
@@ -49,30 +49,9 @@
 							<answer>Don't know or don't want to answer</answer>
 						</answers>
 					</question>
-					
-					<question id="gender" class="one">
-						<query>
-							What is your gender?
-						</query>
-						<answers>
-							<answer>Male</answer>
-							<answer>Female</answer>
-							<answer>Don't know or don't want to answer</answer>
-						</answers>	
-					</question>
-					
-					<question id="often" class="one">
-						<query>
-							How often do you use the internet?
-						</query>
-						<answers>
-							<answer>More than once a day</answer>
-							<answer>More than once a week</answer>
-							<answer>More than once a month</answer>
-							<answer>Don't know or don't want to answer</answer>
-						</answers>
-					</question>
-					
+				</questionpage>
+				
+				<questionpage id="qp2" style="display:none">
 					<question id="websites" class="many">
 						<query>
 							Which websites do you read?
@@ -113,22 +92,32 @@
 						</answers>
 					</question>
 				</questionpage>
-				<questionpage id="qp2" style="display:none">
-					<question id="often" class="one scale">
+				
+				<questionpage id="qp3" style="display:none">
+					<question id="gender" class="one">
 						<query>
-							On a scale of 0 to 5, how well does the following statement reflect your opinion? 
-							<br />
-							<em>(1=Strongly disagree, 5=Strongly agree)</em>
+							What is your gender?
 						</query>
 						<answers>
-							<answer>1</answer>
-							<answer>2</answer>
-							<answer>3</answer>
-							<answer>4</answer>
-							<answer>5</answer>
+							<answer>Male</answer>
+							<answer>Female</answer>
+							<answer>Don't know or don't want to answer</answer>
+						</answers>	
+					</question>	
+					
+					<question id="often" class="one">
+						<query>
+							How often do you use the internet?
+						</query>
+						<answers>
+							<answer>More than once a day</answer>
+							<answer>More than once a week</answer>
+							<answer>More than once a month</answer>
+							<answer>Don't know or don't want to answer</answer>
 						</answers>
-					</question>
+					</question>			
 				</questionpage>
+				
 				<paginator id="page-inc">
 					<a id='prev' href='#'>< Prev</a> 
 					<span id="counter">| Page <span id="curr-page"></span> of <span id="total-pages"></span> |</span>
