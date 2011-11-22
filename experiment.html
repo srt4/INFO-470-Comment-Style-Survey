@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>470 Survey Questions</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div id="page1" class="active" style="margin-top: -10px;">
+				<h1>Team 21 Research Survey</h1>
+				<introText>
+					Thank you for taking our survey blah blah blah.
+					
+					<br />
+					
+					<a href='#' data-action="nextPage">Click here</a> to continue. 
+				</introText>
+		</div>
+		<div id="page2">
+			<questionpage class="current trackscroll" id="image1">
+				<introText>Read the following comment thread, and click next when you are finished.</introText>
+				<br />
+				<img src="http://www.konspence.com/470research/img/commentsFLAT.png" style="margin: auto" />
+			</questionpage>
+			
+			<questionpage style="display:none">
+				<introText></introText>
+				<questions>
+					<question id="agreement-1" class="one scale">
+						<query>
+							On a scale of 1 to 5, how would you rate the <strong>agreement level</strong> between commenters?
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+					<question id="empathize-1" class="one scale">
+						<query>
+							One a scale of 1 to 5, how much do you feel the commenters empathized with the <strong>students</strong>?
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+				</questions>
+			</questionpage>
+			<questionpage style="display:none" class="trackscroll" id="image2">
+				<introText>Read the following comment thread, and click next when you are finished.</introText>
+				<br />
+				<img src="http://www.konspence.com/470research/img/comments1.PNG" />
+			</questionpage>
+			<questionpage style="display:none">
+				<introText></introText>
+				<questions>
+					<question id="agreement-2" class="one scale">
+						<query>
+							On a scale of 1 to 5, how would you rate the <strong>agreement level</strong> between commenters?
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+					<question id="empathize-2" class="one scale">
+						<query>
+							One a scale of 1 to 5, how much do you feel the commenters empathized with the <strong>prisoners</strong>?
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+				</questions>
+			</questionpage>
+			<questionpage style="display:none">
+				<introtext>
+					<h2>Thank you for taking our survey.</h2>
+					<br />
+					If you wish, you can go back and review your answers.
+					<br />
+					<h3><a href='#' id='submit'>Submit Responses</a></h3>
+				</introtext>
+			</questionpage>
+			<paginator id="page-inc">
+				<a id='prev' href='#'>< Prev</a> 
+				<span id="counter">| Page <span id="curr-page"></span> of <span id="total-pages"></span> |</span>
+				<a id='next' href='#'>Next ></a>
+			</paginator>
+		</div>
+		<div id="page3">
+		</div>
+		<div id="page4">
+		</div>
+	</body>
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/responseModel.js"></script>
+</html>

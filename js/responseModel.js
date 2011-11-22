@@ -2,6 +2,7 @@
 var Survey = {};
 Survey.responses = {};
 Survey.sensors = {};
+Survey.sensors.scroll = {};
 /**
  * initializeModel ()
  * Populates the survey model with default (-1) values. 

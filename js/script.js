@@ -35,12 +35,14 @@ $(document).ready(function(){
 	});
 	
 	// Update the model each time a question is updated
-	$('#page2 questions question').click(function(){
+	$('questions question').click(function(){
 		updatePageNumbers();
 		console.log("Updating model?");
 		updateModel(this);
 	});
 	
+	
+	$('questionpage img').click(goNext);
 	
 	$('#page-inc a').click(function(){
 		console.log($(this).text());
@@ -90,6 +92,16 @@ $(document).ready(function(){
 	   }
 	}
 	
+	function goNext ()
+	{			
+			if(canNext())
+			{
+				$('questionpage.current').removeClass('current').fadeOut(100, function(){
+					$(this).next('questionpage').fadeIn(100, updatePageNumbers).addClass('current');
+				});
+			}
+	}
+	
 	function canNext ()
 	{
 		if($('questionpage.current').index() == ($('questionpage').length - 1))
@@ -111,5 +123,23 @@ $(document).ready(function(){
 		$('#curr-page').text(currPage);
 		$('#total-pages').text(totalPages);
 		updateNextPrevLinks();
+		
+		var currElem = $('questionpage.current');
+		$(document).unbind('scroll'); // remove previous scroll tracking
+		if(currElem.hasClass('trackscroll'))
+		{
+			Survey.sensors.scroll[currElem.attr('id')] = 0;
+			$(document).scroll(function(){
+				Survey.sensors.scroll[currElem.attr('id')]++;
+			});
+		}
 	}
+	
+	// submit final responses!
+	$('#submit').click(function(){
+		Survey.completed = 'true';
+		pushAnswers();
+		$('paginator').fadeOut();
+		$('questionpage.current introtext').text("Thank you!");
+	});
 });
