@@ -163,6 +163,12 @@ $(document).ready(function(){
 	// submit final responses!
 	$('#submit').click(function() {
 		Survey.completed = 'true';
+		
+		var elem = $('#age')[0];
+		// Hack - manually get value of age
+		Survey.responses[$(elem).attr('id')] = {'time': Date.now(), 'value': $(elem).find('input').attr('value') };
+
+		
 		$.post (
 			'http://www.konspence.com/470research/surveyListener.php',
 			Survey,

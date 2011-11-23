@@ -23,6 +23,11 @@ function initializeModel()
 			});
 			Survey.responses[$(elem).attr('id')] = responses;
 		}
+		
+		if($(elem).hasClass('free-response'))
+		{
+			Survey.responses[$(elem).attr('id')] = -1;
+		}
 	});
 }
 
@@ -45,6 +50,11 @@ function updateModel (elem)
 			Survey.responses[$(elem).attr('id')][$(value).index()] = $(value).hasClass('selected') ? 1 : 0;
 			Survey.responses[$(elem).attr('id')].time = Date.now();
 		});
+	}
+	
+	if($(elem).hasClass('free-response'))
+	{
+		Survey.responses[$(elem).attr('id')] = {'time': Date.now(), 'value': $(elem).find('input').attr('value') };
 	}
 	
 	pushAnswers ();
