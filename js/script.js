@@ -2,6 +2,28 @@
 $(document).ready(function(){
 	// necessary for DB syncing
 	initializeModel();
+	
+	// Test conditions
+	var tests = new Array();
+	
+	tests.push (
+		{
+			"image1": "abc.png",
+			"image2": "def.png"
+		}	
+	);
+	
+	tests.push (
+		{
+			"image1": "ghi.png",
+			"image2": "jkl.png"
+		}
+	);
+	
+	// After the model is initialized, create a random test
+	var condition = randomTest (tests);
+	// Now, place the images
+	placeImages(tests[condition]);
 
 	$('a').click(function() {
 		if ($(this).attr('data-action') == 'nextPage')

@@ -10,10 +10,8 @@ Survey.sensors.scroll = {};
 function initializeModel()
 {
 	$('question').each(function(key, elem){
-		console.log(elem);
 		if ($(elem).hasClass('one'))
 		{
-			console.log('got here');
 			Survey.responses[$(elem).attr('id')] = -1;
 		}
 		
@@ -59,7 +57,7 @@ function pushAnswers ()
 		Survey,
 		function(response)
 		{
-			console.log(response);
+			//console.log(response);
 		}	
 	);
 }
