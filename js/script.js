@@ -65,7 +65,7 @@ $(document).ready(function(){
 	});
 	
 	
-	$('questionpage img').click(goNext);
+	//$('questionpage img').click(goNext);
 	
 	$('#page-inc a').click(function(){
 		console.log($(this).text());
