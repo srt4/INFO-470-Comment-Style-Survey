@@ -9,7 +9,8 @@ $(document).ready(function(){
 		{
 			"summary": "UC Davis police officers used pepper spray and batons against a group of students participating in the non-violent Occupy UCD protest.",
 			"image1": "img/occupy-f.png",
-			"image2": "img/occupy-t.png"
+			"image2": "img/occupy-t.png",
+			"subject": "students"
 		}	
 	);
 	
@@ -17,7 +18,8 @@ $(document).ready(function(){
 		{
 			"summary": "Prisoners in the US are charged $5 to make a phone call, while earning only $1 per day. The prison that charges this amount of money is a for-profit entity.",
 			"image1": "img/prison-f.png",
-			"image2": "img/prison-t.png"
+			"image2": "img/prison-t.png",
+			"subject": "prisoners"
 		}
 	);
 	

@@ -22,5 +22,6 @@ function /* boolean */ placeImages (/* Array */ images)
 	$('#img1').attr('src', images.image1);
 	$('#img2').attr('src', images.image2);
 	$('#image1 span').text(images.summary);
+	$('.article-subject').text(images.subject);
 	return true;
 }
