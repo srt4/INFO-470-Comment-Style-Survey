@@ -1,4 +1,3 @@
-// 
 $(document).ready(function(){
 	// necessary for DB syncing
 	initializeModel();
@@ -8,15 +7,17 @@ $(document).ready(function(){
 	
 	tests.push (
 		{
-			"image1": "abc.png",
-			"image2": "def.png"
+			"summary": "UC Davis police officers used pepper spray and batons against a group of students participating in the non-violent Occupy UCD protest.",
+			"image1": "img/occupy-f.png",
+			"image2": "img/occupy-t.png"
 		}	
 	);
 	
 	tests.push (
 		{
-			"image1": "ghi.png",
-			"image2": "jkl.png"
+			"summary": "Prisoners in the US are charged $5 to make a phone call, while earning only $1 per day. The prison that charges this amount of money is a for-profit entity.",
+			"image1": "img/prison-f.png",
+			"image2": "img/prison-t.png"
 		}
 	);
 	
@@ -59,7 +60,7 @@ $(document).ready(function(){
 	// Update the model each time a question is updated
 	$('questions question').click(function(){
 		updatePageNumbers();
-		console.log("Updating model?");
+		//console.log("Updating model?");
 		updateModel(this);
 	});
 	
@@ -158,10 +159,16 @@ $(document).ready(function(){
 	}
 	
 	// submit final responses!
-	$('#submit').click(function(){
+	$('#submit').click(function() {
 		Survey.completed = 'true';
-		pushAnswers();
+		$.post (
+			'http://www.konspence.com/470research/surveyListener.php',
+			Survey,
+			function(response)
+			{
+				$('questionpage.current introtext').html("Your responses have been saved. <br />Thank you for your time!");
+			}	
+		);
 		$('paginator').fadeOut();
-		$('questionpage.current introtext').html("Your responses have been saved. <br />Thank you for your time!");
 	});
 });
