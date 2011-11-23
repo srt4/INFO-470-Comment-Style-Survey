@@ -1,88 +1,65 @@
 <html>
 	<head>
-		<title>470 Research</title>
+		<title>470 Survey Questions</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+          <link rel="stylesheet" type="text/css" href="http://monroe.spencerrthomas.com/470-Survey/css/style.css" />
 	</head>
 	<body>
-		<div id="page1" class="active" style="margin-top: -10px; margin-bottom: -10px">
-			<h1>Team 21 Research Survey</h1>
-			<introText>
-				Thank you for taking our survey blah blah blah.
-				
-				<br />
-				
-				<a href='#' data-action="nextPage">Click here</a> to continue. 
-			</introText>
+		<div id="page1" class="active" style="margin-top: -10px;">
+				<h1>Team 21 Research Survey</h1>
+				<introText style="display:block;width:440px;margin:auto;line-height:1.5em">
+					Thank you for participating in our study. We are conducting a study for a course in
+					research methods in human-computer interaction, and seek to understand how
+					different structures and sorting of comments on websites affect the reader's
+					perception of the discussion. 
+					
+					<br />
+					<br />
+					
+					We will show you a selected section of comments* related to current events, and
+					then ask you to rate how you perceive the interaction among the users. 
+					
+					<br />
+					<br />
+					
+					<h4>When you are ready to begin, <a href='#' data-action="nextPage">click here</a> to continue.</h4>
+					
+					<span style="font-size: 0.7em">*Comments sourced from various users on reddit.com.</span>
+				</introText>
 		</div>
-		
-		<div id="page2" style="margin-top: -10px; margin-bottom: -10px">
-			<h1>Team 21 Research Survey</h1>
-			<introText>
-				
-			</introText>
+		<div id="page2">
+			<questionpage class="current trackscroll" id="image1">
+                          <introText style="width: 800px; text-align: left; margin: auto; margin-top: 50px;">
+							 This comment thread is about an article found on Reddit, summarized below:
+							  <br />
+							  <br />
+							   <strong>UC Davis police officers used pepper spray and batons 
+							  against a group of students participating in the non-violent 
+							  Occupy UCD protest.</strong>
+							  <br />
+							  <br/>
+							  Please read the comments, paying attention to 
+							  whether users are in agreement or disagreement among themselves
+							  and the subject of the article, 
+							  and click next when you are finished.
+							  <br />
+							  <br />
+							  <br />
+							  <br />
+							  
+                          </introText>
+				<br />
+				<img src="http://www.konspence.com/470research/img/commentsFLAT.png" style="margin-left: 75px" />
+			</questionpage>
 			
-			<questions>
-				<questionpage id="qp1" class="current">
-					<question id="read" class="one">
-						<query>Do you read comment sections of websites?</query>
-						<answers>
-							<answer>Yes</answer>
-							<answer>No</answer>
-							<answer>Don't know or don't want to answer</answer>
-						</answers>
-					</question>
-					
-					<question id="comment" class="one">
-						<query>Have you ever posted a comment on a website?</query>
-						<answers>
-							<answer>Yes</answer>
-							<answer>No</answer>
-							<answer>Don't know or don't want to answer</answer>
-						</answers>
-					</question>
-					
-					<question id="comment-reply" class="one conditional" data-depends="comment" data-depends-value="0">
-						<query>Do you ever reply to other people's comments?</query>
-						<answers>
-							<answer>Yes</answer>
-							<answer>No</answer>
-							<answer>Don't know or don't want to answer</answer>
-						</answers>
-					</question>
-				</questionpage>
-				
-				<questionpage id="qp2" style="display:none">
-					<question id="websites" class="many">
+			<questionpage style="display:none">
+				<introText></introText>
+				<questions>
+					<question id="agreement-1" class="one scale">
 						<query>
-							Which websites do you read?
-							<br/>
-							<em>(Select all that apply)</em>
-						</query>
-						<answers>
-							<answer>
-								Facebook
-							</answer>
-							<answer>
-								Reddit
-							</answer>
-							<answer>
-								Newspaper Websites (NYT, Seattle Times, etc.)
-							</answer>
-							<answer>
-								Tech-related websites (Engadget, Gizmodo, etc.)
-							</answer>
-							<answer>
-								Don't know or don't want to answer
-							</answer>
-						</answers>
-					</question>
-					
-					<question id="often" class="one scale">
-						<query>
-							On a scale of 0 to 5, how well does the following statement reflect your opinion? 
+							On a scale of 1 to 5, how would you rate the <strong>agreement level</strong> between commenters?
 							<br />
-							<em>(1=Strongly disagree, 5=Strongly agree)</em>
+							<em>(1 = Strong disagreement, 5 = Strong agreement)</em>
 						</query>
 						<answers>
 							<answer>1</answer>
@@ -92,46 +69,195 @@
 							<answer>5</answer>
 						</answers>
 					</question>
-				</questionpage>
-				
-				<questionpage id="qp3" style="display:none">
-					<questions>
-						<question id="gender" class="one">
-							<query>
-								What is your gender?
-							</query>
-							<answers>
-								<answer>Male</answer>
-								<answer>Female</answer>
-								<answer>Don't know or don't want to answer</answer>
-							</answers>	
-						</question>	
-						
-						<question id="often" class="one">
-							<query>
-								How often do you use the internet?
-							</query>
-							<answers>
-								<answer>More than once a day</answer>
-								<answer>More than once a week</answer>
-								<answer>More than once a month</answer>
-								<answer>Don't know or don't want to answer</answer>
-							</answers>
-						</question>			
-				</questionpage>
-				
-				<paginator id="page-inc">
-					<a id='prev' href='#'>< Prev</a> 
-					<span id="counter">| Page <span id="curr-page"></span> of <span id="total-pages"></span> |</span>
-					<a id='next' href='#'>Next ></a>
-				</paginator>
-			</questions>						
-		</div>
+					<question id="empathize-1" class="one scale">
+						<query>
+							One a scale of 1 to 5, how much do you feel the commenters empathized with the <strong>students</strong>?
+							<br />
+							<em>(1 = Little to no empathy, 5 = Strong empathy)</em>
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+				</questions>
+			</questionpage>
+			<questionpage style="display:none" class="trackscroll" id="image2">
+				<introText style="width: 800px; text-align: left; margin: auto; margin-top: 50px;">
+					The following image is of a different set of comments for the same article.
+					Please read these comments as well, similarly noting the level of agreement or 
+					disagreement among users towards each other and the subject of the article, and
+					click next when you have finished. 
+					
+					<br />
+					<br />
+					<br />
+					<br />
+					
+				</introText>
+				<br />
+				<img src="http://www.konspence.com/470research/img/comments1.PNG" />
+			</questionpage>
+			<questionpage style="display:none">
+				<introText></introText>
+				<questions>
+					<question id="agreement-2" class="one scale">
+						<query>
+							On a scale of 1 to 5, how would you rate the <strong>agreement level</strong> between commenters?
+							<br />
+							<em>(1 = Strong disagreement, 5 = Strong agreement)</em>
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+					<question id="empathize-2" class="one scale">
+						<query>
+							One a scale of 1 to 5, how much do you feel the commenters empathized with the <strong>prisoners</strong>?
+							<br />
+							<em>(1 = Little to no empathy, 5 = Strong empathy)</em>
+						</query>
+						<answers>
+							<answer>1</answer>
+							<answer>2</answer>
+							<answer>3</answer>
+							<answer>4</answer>
+							<answer>5</answer>
+						</answers>
+					</question>
+				</questions>
+			</questionpage>
 
+			<questionpage id="qp2" style="display:none">
+				<questions>
+					<question id="read-comments" class="one">
+						<query>
+							How often do you <strong>read</strong> the comment section of websites? 
+							(This includes Facebook, Reddit, New York Times, etc.)
+						</query>
+						<answers>
+							<answer>Multiple times per day</answer>
+							<answer>Every day</answer>
+							<answer>Multiple times per week</answer>
+							<answer>Multiple times per month</answer>
+							<answer>Once a month or less frequently / never</answer>
+						</answers>
+					</question>
+					<question id="post-comments" class="one">
+						<query>
+							How often do you <strong>post</strong> comments to websites? 
+							(This includes Facebook, Reddit, New York Times, etc.)
+						</query>
+						<answers>
+							<answer>Multiple times per day</answer>
+							<answer>Every day</answer>
+							<answer>Multiple times per week</answer>
+							<answer>Multiple times per month</answer>
+							<answer>Once a month or less frequently / never</answer>
+						</answers>
+					</question>
+					<question id="browse-web" class="one">
+						<query>
+							How often do you <strong>browse the web</strong>?
+						</query>
+						<answers>
+							<answer>Multiple times per day</answer>
+							<answer>Every day</answer>
+							<answer>Multiple times per week</answer>
+							<answer>Multiple times per month</answer>
+							<answer>Once a month or less frequently / never</answer>
+						</answers>
+					</question>
+				<question id="websites-read" class="many">
+					<query>
+						Which websites do you <strong>read</strong>?
+						<br/>
+						<em>(Select all that apply)</em>
+					</query>
+					<answers>
+						<answer>
+							Facebook
+						</answer>
+						<answer>
+							Reddit
+						</answer>
+						<answer>
+							Newspaper Websites (NYT, Seattle Times, etc.)
+						</answer>
+						<answer>
+							Tech-related websites (Engadget, Gizmodo, etc.)
+						</answer>
+						<answer>
+							Don't know or don't want to answer
+						</answer>
+					</answers>
+				</question>
+				
+                <question id="websites-comment" class="many">
+					<query>
+						Of these websites, to which, if any, have you <strong>posted comments</strong>?
+						<br />
+						<em>(Select all that apply)</em>
+					</query>
+					<answers>
+						<answer>
+							Facebook
+						</answer>
+						<answer>
+							Reddit
+						</answer>
+						<answer>
+							Newspaper Websites (NYT, Seattle Times, etc.)
+						</answer>
+						<answer>
+							Tech-related websites (Engadget, Gizmodo, etc.)
+						</answer>
+						<answer>
+							Don't know or don't want to answer
+						</answer>
+					</answers>
+				</question>
+					<question id="gender" class="one">
+						<query>
+							What is your gender?
+						</query>
+						<answers>
+							<answer>Male</answer>
+							<answer>Female</answer>
+							<answer>Don't know or don't want to answer</answer>
+						</answers>	
+					</question>		
+				</questions>
+			</questionpage>
+			
+			<questionpage style="display:none">
+				<introtext>
+					<h2>Thank you for taking our survey.</h2>
+					<br />
+					If you wish, you can go back and review your answers.
+					<br />
+					<h3><a href='#' id='submit'>Submit Responses</a></h3>
+				</introtext>
+			</questionpage>
+			<paginator id="page-inc">
+				<a id='prev' href='#'>< Prev</a> 
+				<span id="counter"><strong>| Page <span id="curr-page"></span> of <span id="total-pages"></span> |</strong></span>
+				<a id='next' href='#'>Next ></a>
+			</paginator>
+		</div>
 		<div id="page3">
+		</div>
+		<div id="page4">
 		</div>
 	</body>
 	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/responseModel.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+	<script src="js/responseModel.js"></script>
 </html>
