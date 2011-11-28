@@ -131,3 +131,8 @@ questionpage
 {
 	display:block;
 }
+
+#img1, #img2
+{
+	max-width: 100%;
+}

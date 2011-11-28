@@ -2,7 +2,7 @@
 	<head>
 		<title>470 Survey Questions</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-          <link rel="stylesheet" type="text/css" href="http://monroe.spencerrthomas.com/470-Survey/css/style.css" />
+          <link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 	<body>
 		<div id="page1" class="active" style="margin-top: -10px;">
@@ -32,7 +32,7 @@
 		<div id="page2">
 			<questionpage class="current trackscroll" id="image1">
                           <introText style="width: 800px; text-align: left; margin: auto; margin-top: 50px;">
-							 This comment thread is about an article found on Reddit, summarized below:
+							 This comment thread is about an article found on a news website, summarized below:
 							  <br />
 							  <br />
 							   <strong>
@@ -51,7 +51,9 @@
 							  
                           </introText>
 				<br />
-				<img src="http://www.konspence.com/470research/img/commentsFLAT.png" id="img1" style="margin-left: 75px" />
+				<imgcontainer style="display:block; width: 100%; text-align: center">
+					<img src="http://www.konspence.com/470research/img/commentsFLAT.png" id="img1" />
+				</imgcontainer>
 			</questionpage>
 			
 			<questionpage style="display:none">
@@ -89,19 +91,29 @@
 			</questionpage>
 			<questionpage style="display:none" class="trackscroll" id="image2">
 				<introText style="width: 800px; text-align: left; margin: auto; margin-top: 50px;">
-					The following image is of a different set of comments for the same article.
-					Please read these comments as well, similarly noting the level of agreement or 
-					disagreement among users towards each other and the subject of the article, and
-					click next when you have finished. 
-					
-					<br />
-					<br />
-					<br />
-					<br />
+                    <introText style="width: 800px; text-align: left; margin: auto; margin-top: 50px;">
+							 This comment thread is about an article found on another news website, summarized below:
+							  <br />
+							  <br />
+							   <strong>
+							   		<span class="summary"></span>
+							   </strong>
+							  <br />
+							  <br/>
+							  Please read the comments, paying attention to 
+							  whether users are in agreement or disagreement among themselves
+							  and the subject of the article, 
+							  and click next when you are finished.
+							  <br />
+							  <br />
+							  <br />
+							  <br />
 					
 				</introText>
 				<br />
-				<img src="http://www.konspence.com/470research/img/comments1.PNG" id="img2" style="margin-left: 45px" />
+				<imgcontainer style="display:block; width: 100%; text-align: center">
+					<img src="http://www.konspence.com/470research/img/comments1.PNG" id="img2" />
+				</imgcontainer>
 			</questionpage>
 			<questionpage style="display:none">
 				<introText></introText>
@@ -122,7 +134,7 @@
 					</question>
 					<question id="empathize-2" class="one scale">
 						<query>
-							One a scale of 1 to 5, how much do you feel the commenters empathized with the <strong class='article-subject'>prisoners</strong>?
+							One a scale of 1 to 5, how much do you feel the commenters empathized with the <strong class='article2-subject'>prisoners</strong>?
 							<br />
 							<em>(1 = Little to no empathy, 5 = Strong empathy)</em>
 						</query>

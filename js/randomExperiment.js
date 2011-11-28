@@ -17,11 +17,19 @@ function /* int */ randomTest (/* Array */ testConditions)
 	return condition;
 }
 
-function /* boolean */ placeImages (/* Array */ images)
+function /* boolean */ placeImages (/* Array */ images, /* int */ condition)
 {	
-	$('#img1').attr('src', images.image1);
-	$('#img2').attr('src', images.image2);
-	$('#image1 span').text(images.summary);
-	$('.article-subject').text(images.subject);
+	var article1 = images.splice(condition, 1)[0];
+	var article2 = images.splice(0, 1)[0];
+
+	$('#img1').attr('src', article1.flat);
+	$('#img2').attr('src', article2.threaded);
+	
+	$('#image1 span').text(article1.summary);
+	$('.article-subject').text(article1.subject);
+	
+	$('#image2 span').text(article2.summary);
+	$('.article2-subject').text(article2.summary);
+	
 	return true;
 }
