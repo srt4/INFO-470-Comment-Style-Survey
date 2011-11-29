@@ -29,7 +29,7 @@ function /* boolean */ placeImages (/* Array */ images, /* int */ condition)
 	$('.article-subject').text(article1.subject);
 	
 	$('#image2 span').text(article2.summary);
-	$('.article2-subject').text(article2.summary);
+	$('.article2-subject').text(article2.subject);
 	
 	return true;
 }
