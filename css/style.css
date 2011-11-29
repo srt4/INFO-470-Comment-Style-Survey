@@ -66,6 +66,11 @@ input
 	color: #666;
 }
 
+#page2
+{
+	position: relative;
+}
+
 #page2 question answer
 {
 	margin-bottom: 10px;
@@ -116,7 +121,8 @@ input
 
 #page-inc
 {
-	position: fixed; 
+	margin-top: 25px;
+	position: absolute; 
 	bottom:0px; 
 	width: 100%;
 	left: 0px;
@@ -130,6 +136,7 @@ input
 questionpage
 {
 	display:block;
+	margin-bottom: 25px;
 }
 
 #img1, #img2
