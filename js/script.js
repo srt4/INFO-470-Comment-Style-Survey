@@ -43,6 +43,8 @@ $(document).ready(function(){
 			elem.next().fadeIn(150, function() { elem.next().addClass('active') });
 		});
 		
+		Survey.sensors['start-time'] = Date.now();
+		
 		updatePageNumbers ();
 	}
 	
@@ -70,7 +72,7 @@ $(document).ready(function(){
 	//$('questionpage img').click(goNext);
 	
 	$('#page-inc a').click(function(){
-		console.log($(this).text());
+		//console.log($(this).text());
 		if ($(this).text().indexOf('Prev') >= 0)
 		{
 			if(canPrev())
@@ -168,6 +170,7 @@ $(document).ready(function(){
 		// Hack - manually get value of age
 		Survey.responses[$(elem).attr('id')] = {'time': Date.now(), 'value': $(elem).find('input').attr('value') };
 
+		Survey.sensors['end-time'] = Date.now();
 		
 		$.post (
 			'http://www.konspence.com/470research/surveyListener.php',
